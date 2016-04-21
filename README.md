@@ -23,7 +23,7 @@ Get-Service NSCP | Stop-Service
 cd "C:\Program Files\NSClient++\"
 nscp.exe test
 ```
-* Then connect via SSH to your linux server where nagios is running
+* Then connect via SSH to your linux server where nagios is running and execute the following command:
 ```
 /usr/lib/nagios/plugins/plugins_app/check_nrpe -H XXX.XXX.XXX.XXX -t 30 -C check_name_XXXX
 ```
