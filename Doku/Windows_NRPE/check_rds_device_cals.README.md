@@ -1,4 +1,4 @@
-# Check rds device cals
+# check_rds_device_cals.ps1
 
 PowerShell script to check your available rds device cals with usage in percent
 
