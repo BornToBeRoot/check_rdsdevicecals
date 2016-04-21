@@ -57,12 +57,12 @@ Param(
 
     [Parameter(
         Position=2,
-        HelpMessage="Select your license key pack [KeyPackType --> 0 = unkown, 1 = retail, 2 = volume, 3 = concurrent, 4 = temporary, 5 = open license, 6 = not supported] (more details under: https://msdn.microsoft.com/en-us/library/windows/desktop/aa383803%28v=vs.85%29.aspx)")]
+        HelpMessage="Select your license key pack [KeyPackType --> 0 = unkown, 1 = retail, 2 = volume, 3 = concurrent, 4 = temporary, 5 = open license, 6 = not supported] (More details under: https://msdn.microsoft.com/en-us/library/windows/desktop/aa383803%28v=vs.85%29.aspx)")]
     [Int32[]]$KeyPackTypes=(0,1,2,3,4,5,6),
 
     [Parameter(
         Position=3,
-        HelpMessage="Select your product version [ProductVersionID --> 0 = not supported, 1 = not supported, 2 = 2008, 3 = 2008R2, 4 = 2012] (more details under: https://msdn.microsoft.com/en-us/library/windows/desktop/aa383803%28v=vs.85%29.aspx)")]
+        HelpMessage="Select your product version [ProductVersionID --> 0 = not supported, 1 = not supported, 2 = 2008, 3 = 2008R2, 4 = 2012] (More details under: https://msdn.microsoft.com/en-us/library/windows/desktop/aa383803%28v=vs.85%29.aspx)")]
     [Int32[]]$ProductVersionID=(0,1,2,3,4),
 
     [Parameter(
