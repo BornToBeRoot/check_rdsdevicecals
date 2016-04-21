@@ -8,11 +8,11 @@
 
 <#
     .SYNOPSIS
-    Script to check your available rds device cals with usage in percent
+    PowerShell script to check your available rds device cals with usage in percent
 
     .DESCRIPTION
-	This PowerShell script allows you to check your available remote desktop services device 
-	cals with usage in percent using NRPE/NSClient++.
+    PowerShell script to check your available remote desktop services (rds) device cals with usage 
+    in percent using NRPE/NSClient++.
 
 	-- KeyPackType --
 	0 - The Remote Desktop Services license key pack type is unknown.
