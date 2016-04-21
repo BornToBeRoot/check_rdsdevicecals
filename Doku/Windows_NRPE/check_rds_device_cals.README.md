@@ -6,7 +6,7 @@ PowerShell script to check your available rds device cals with usage in percent
 
 ## Description
 
-This PowerShell script to check your available remote desktop services (rds) device cals with usage in percent using NRPE/NSClient++.
+PowerShell script to check your available remote desktop services (rds) device cals with usage in percent using NRPE/NSClient++.
 
 ## Syntax (PowerShell)
 
@@ -24,7 +24,7 @@ This PowerShell script to check your available remote desktop services (rds) dev
 
 * `OK - 26 rds device cals available from 550 (95.27% usage)`
 * `Warning - 21 rds device cals available from 550 (96.18% usage)`
-* `Critical - 5 rds device cals available from 550 (99.09% usage)
+* `Critical - 5 rds device cals available from 550 (99.09% usage)`
 * `Invalid class "Win32_TSLicenseKeyPack"` - If WMI class is not available
 
 ## Install Guide for NSClient++
@@ -37,22 +37,22 @@ check_rds_device_cals	= cmd /c echo scripts/check_rds_device_cals.ps1 $ARG1$ $AR
 ```
 * Restart service NSClient++
 
-## Create Nagios command
+## Create Nagios Command
 
-* Command name: `check_nrpe_rds_device_cals`
-* Command line: `$USER1$/plugins_app/check_nrpe -H $HOSTADDRESS$ -t 60 -c check_rds_device_cals -a $ARG1$ $ARG2$ $ARG3$ $ARG4$` 
-* Argument description: 
+* Command Name: `check_nrpe_rds_device_cals`
+* Command Line: `$USER1$/plugins_app/check_nrpe -H $HOSTADDRESS$ -t 60 -c check_rds_device_cals -a $ARG1$ $ARG2$ $ARG3$ $ARG4$` 
+* Argument Description: 
 ```
 ARG1 : Warning
 ARG2 : Critical
 ARG3 : KeyPackType
 ARG4 : ProductVersionID
 ```
-## Create a new service
+## Create Host Service
 
 * Description: `rds_device_cals`
-* Service template: `generic-service`
-* Check command: `check_nrpe_rds_device_cals`
+* Service Template: `generic-service`
+* Check Command: `check_nrpe_rds_device_cals`
 * Args: 
 ```
 25
@@ -66,6 +66,7 @@ ARG4 : ProductVersionID
 
 Select which license packs you want to check
 
+```
 0 - The Remote Desktop Services license key pack type is unknown.
 1 - The Remote Desktop Services license key pack type is a retail purchase.
 2 - The Remote Desktop Services license key pack type is a volume purchase.
@@ -73,13 +74,20 @@ Select which license packs you want to check
 4 - The Remote Desktop Services license key pack type is temporary.
 5 - The Remote Desktop Services license key pack type is an open license.
 6 - Not supported.
+```
+
+More details under: [Microsoft Technet - Win32_TSLicenseKeyPack](https://msdn.microsoft.com/en-us/library/windows/desktop/aa383803%28v=vs.85%29.aspx)
 
 ## ProductVersionID
 
 Select which product version (Windows Server version) you want to check
 
+```
 0 - Not supported.
 1 - Not supported.
 2 - Windows Server 2008
 3 - Windows Server 2008 R2
 4 - Windows Server 2012
+```
+
+More details under: [Microsoft Technet - Win32_TSLicenseKeyPack](https://msdn.microsoft.com/en-us/library/windows/desktop/aa383803%28v=vs.85%29.aspx)
