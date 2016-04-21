@@ -13,6 +13,7 @@ Some of my nagios plugins (checks) which might be helpful for some of you
 ### Windows
 
 * Stop the NSClient++ service on the Windows server where you want to test the check
+
 For example (PowerShell):
 ```powershell
 Get-Service NSCP | Stop-Service
