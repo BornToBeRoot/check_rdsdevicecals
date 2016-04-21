@@ -2,13 +2,13 @@
 # Language     :  PowerShell 4.0
 # Filename     :  check_rds_device_cals.ps1
 # Autor        :  BornToBeRoot
-# Description  :  Script to check citrix rds device cals with nagios and NSClient++
+# Description  :  Script to check your available rds device cals with usage in percent using NRPE/NSClient++
 # Repository   :  https://github.com/BornToBeRoot/Nagios_Plugins
 ###############################################################################################################
 
 <#
     .SYNOPSIS
-    Script to check citrix rds device cals with nagios and NSClient++
+    Script to check your available rds device cals with usage in percent using NRPE/NSClient++
 
     .DESCRIPTION
 	This PowerShell script allows you to check your available remote desktop services device 
