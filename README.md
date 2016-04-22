@@ -6,7 +6,7 @@ Some of my nagios plugins (checks) which might be helpful for some of you
 
 ### Windows NRPE
 
-* [check_rds_device_cals.ps1](Windows_NRPE/check_rds_device_cals.ps1) - PowerShell script to check your available rds device cals with usage in percent ([view Doku](Doku/Windows_NRPE/check_rds_device_cals.README.md))
+* [check_rds_device_cals.ps1](Windows_NRPE/check_rds_device_cals.ps1) - PowerShell script to check your available rds device cals with usage in percent ([view documentation](Documentation/Windows_NRPE/check_rds_device_cals.README.md))
 
 ## NRPE Debug mode
 
