@@ -8,11 +8,11 @@
 
 <#
     .SYNOPSIS
-    PowerShell script to check your available rds device cals with usage in percent
+    Script to check your available rds device cals with usage in percent
 
     .DESCRIPTION
-    PowerShell script to check your available remote desktop services (rds) device cals with usage 
-    in percent using NRPE/NSClient++.
+    Script to check your available remote desktop services (rds) device cals with usage in percent 
+    using NRPE/NSClient++.
 
 	-- KeyPackType --
 	0 - The Remote Desktop Services license key pack type is unknown.
@@ -29,16 +29,12 @@
 	2 - Windows Server 2008
 	3 - Windows Server 2008 R2
 	4 - Windows Server 2012
-	
-    If you found a bug or have some ideas to improve this script... Let me know. You find my Github profile in 
-    the links below.
-                
+	   
     .EXAMPLE
     .\check_rds_device_cals.ps1 -Warning 20 -Critical 5 -KeyPackTypes 2 -ProductVersionID 2,3
         
     .LINK
-    Github Profil:         https://github.com/BornToBeRoot
-    Github Repository:     https://github.com/BornToBeRoot/Nagios_Plugins
+    https://github.com/BornToBeRoot/Nagios_Plugins/blob/master/Documentation/Windows_NRPE/check_rds_device_cals.README.md
 #>
 
 [CmdletBinding()]
@@ -71,7 +67,10 @@ Param(
     [String]$ComputerName=$env:COMPUTERNAME
 )
 
-Begin{}
+Begin{
+
+}
+
 Process{
 	# Get all license key packs from WMI
 	try{
@@ -116,4 +115,7 @@ Process{
         exit 0
     }     
 }
-End{}
+
+End{
+
+}
