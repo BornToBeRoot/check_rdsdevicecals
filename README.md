@@ -1,6 +1,6 @@
 # Nagios Plugins (Checks)
 
-Some of my nagios plugins (checks) which might be helpful for some of you
+Some of my nagios plugins (checks) which might be helpful for some of you.
 
 ## Checks
 
@@ -27,7 +27,7 @@ nscp.exe test
 ```
 /usr/lib/nagios/plugins/plugins_app/check_nrpe -H XXX.XXX.XXX.XXX -t 30 -C check_name_XXXX
 ```
-* If you are done testing... don't forget to start the NSClient++ service on your Windows server
+* If you are done testing... don't forget to start the NSClient++ service on your Windows server again
 ```powershell
 Get-Service NSCP | Start-Service
 ```
