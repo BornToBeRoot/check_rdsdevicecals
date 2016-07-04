@@ -2,17 +2,16 @@
 # Language     :  PowerShell 4.0
 # Filename     :  check_rds_device_cals.ps1
 # Autor        :  BornToBeRoot
-# Description  :  Script to check your available rds device cals with usage in percent using NRPE/NSClient++
+# Description  :  Check your available rds device cals with usage in percent using NRPE/NSClient++
 # Repository   :  https://github.com/BornToBeRoot/Nagios_Plugins
 ###############################################################################################################
 
 <#
     .SYNOPSIS
-    Script to check your available rds device cals with usage in percent
+    Check your available rds device cals with usage in percent
 
     .DESCRIPTION
-    Script to check your available remote desktop services (rds) device cals with usage in percent 
-    using NRPE/NSClient++.
+    Check your available remote desktop services (rds) device cals with usage in percent using NRPE/NSClient++.
 
 	-- KeyPackType --
 	0 - The Remote Desktop Services license key pack type is unknown.
