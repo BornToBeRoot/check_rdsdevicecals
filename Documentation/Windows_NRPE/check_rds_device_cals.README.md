@@ -1,12 +1,12 @@
 # check_rds_device_cals.ps1
 
-Script to check your available rds device cals with usage in percent
+Check your available rds device cals with usage in percent
 
 * [view script](https://github.com/BornToBeRoot/Nagios_Plugins/blob/master/Windows_NRPE/check_rds_device_cals.ps1)
 
 ## Description
 
-Script to check your available remote desktop services (rds) device cals with usage in percent using NRPE/NSClient++.
+Check your available remote desktop services (rds) device cals with usage in percent using NRPE/NSClient++.
 
 Could be useful for:
 * Windows-/Citrix-Terminalserver
