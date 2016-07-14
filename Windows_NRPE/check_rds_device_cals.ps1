@@ -1,7 +1,7 @@
 ###############################################################################################################
 # Language     :  PowerShell 4.0
 # Filename     :  check_rds_device_cals.ps1
-# Autor        :  BornToBeRoot
+# Autor        :  https://github.com/BornToBeRoot
 # Description  :  Check your available rds device cals with usage in percent using NRPE/NSClient++
 # Repository   :  https://github.com/BornToBeRoot/Nagios_Plugins
 ###############################################################################################################
