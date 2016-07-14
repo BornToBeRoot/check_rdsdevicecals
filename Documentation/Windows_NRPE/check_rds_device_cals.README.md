@@ -1,6 +1,6 @@
 # check_rds_device_cals.ps1
 
-Check your available rds device cals with usage in percent
+Check your available rds device cals with usage in percent.
 
 * [view script](https://github.com/BornToBeRoot/Nagios_Plugins/blob/master/Windows_NRPE/check_rds_device_cals.ps1)
 
