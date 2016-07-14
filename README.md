@@ -6,7 +6,9 @@ Some of my nagios plugins (checks) which might be helpful for some of you.
 
 ### Windows NRPE
 
-* [check_rds_device_cals.ps1](Windows_NRPE/check_rds_device_cals.ps1) - Check your available rds device cals with usage in percent ([view documentation](Documentation/Windows_NRPE/check_rds_device_cals.README.md))
+| Script | Description | Help |
+| :--- | :--- | :---: |
+| [check_rds_device_cals.ps1](Windows_NRPE/check_rds_device_cals.ps1) | Check your available rds device cals with usage in percent | [:book:](Documentation/Windows_NRPE/check_rds_device_cals.README.md) |
 
 ## NRPE Debug mode
 
@@ -14,7 +16,7 @@ Some of my nagios plugins (checks) which might be helpful for some of you.
 
 * Stop the NSClient++ service on the Windows server where you want to test the check
 
-For example (PowerShell):
+For example (PowerShell as admin):
 ```powershell
 Get-Service NSCP | Stop-Service
 ```
@@ -32,7 +34,7 @@ nscp.exe test
 Get-Service NSCP | Start-Service
 ```
 
-## Exit codes
+## Return codes
 
 ```
 0 = OK

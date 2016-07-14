@@ -11,26 +11,28 @@ Check your available remote desktop services (rds) device cals with usage in per
 Could be useful for:
 * Windows-/Citrix-Terminalserver
 
-## Syntax (PowerShell)
+## Syntax
 
 ```powershell
 .\check_rds_device_cals.ps1 [-Warning] <Int32> [-Critical] <Int32> [[-KeyPackTypes] <Int32[]>] [[-ProductVersionID] <Int32[]>] [[-ComputerName] <String>] [<CommonParameters>]
 ```
 
-## Example (PowerShell)
+## Example
 
 ```powershell
 PS> .\check_rds_device_cals.ps1 -Warning 25 -Critical 10 -KeyPackTypes 2 -ProductVersionID 2,3
 ```
 
-## Return Values
+## Example return codes / output
 
 * `OK - 26 rds device cals available from 550 (95.27% usage)`
 * `Warning - 21 rds device cals available from 550 (96.18% usage)`
 * `Critical - 5 rds device cals available from 550 (99.09% usage)`
 * `Invalid class "Win32_TSLicenseKeyPack"` - If WMI class is not available
 
-## Install Guide for NSClient++
+## Install Guide
+
+#### Add script to NSClient++
 
 * Copy `check_rds_device_cals.ps1` to `NSClient++\Scripts\`
 * Open up a PowerShell as an admin and set the execution policy: `Set-ExecutionPolicy RemoteSigned`
@@ -40,7 +42,7 @@ check_rds_device_cals	= cmd /c echo scripts/check_rds_device_cals.ps1 $ARG1$ $AR
 ```
 * Restart service NSClient++
 
-## Create Nagios Command
+#### Create a Nagios command
 
 * Command Name: `check_nrpe_rds_device_cals`
 * Command Line: `$USER1$/plugins_app/check_nrpe -H $HOSTADDRESS$ -t 60 -c check_rds_device_cals -a $ARG1$ $ARG2$ $ARG3$ $ARG4$` 
@@ -51,7 +53,7 @@ ARG2 : Critical
 ARG3 : KeyPackType
 ARG4 : ProductVersionID
 ```
-## Create Host Service
+#### Create a Host Service
 
 * Description: `rds_device_cals`
 * Service Template: `generic-service`
@@ -63,9 +65,11 @@ ARG4 : ProductVersionID
 2 
 2,3
 ```  
-* Link your hosts you want to check
+* Link the hosts you want to check
 
-## KeyPackType
+## Additional information
+
+#### KeyPackType
 
 Select which license packs you want to check
 
@@ -81,7 +85,7 @@ Select which license packs you want to check
 
 More details under: [Microsoft Technet - Win32_TSLicenseKeyPack](https://msdn.microsoft.com/en-us/library/windows/desktop/aa383803%28v=vs.85%29.aspx)
 
-## ProductVersionID
+#### ProductVersionID
 
 Select which product version (Windows Server version) you want to check
 
