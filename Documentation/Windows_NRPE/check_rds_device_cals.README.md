@@ -32,7 +32,7 @@ PS> .\check_rds_device_cals.ps1 -Warning 25 -Critical 10 -KeyPackTypes 2 -Produc
 
 ## Install Guide
 
-#### Add script to NSClient++
+### Add script to NSClient++
 
 * Copy `check_rds_device_cals.ps1` to `NSClient++\Scripts\`
 * Open up a PowerShell as an admin and set the execution policy: `Set-ExecutionPolicy RemoteSigned`
@@ -42,7 +42,7 @@ check_rds_device_cals	= cmd /c echo scripts/check_rds_device_cals.ps1 $ARG1$ $AR
 ```
 * Restart service NSClient++
 
-#### Create a Nagios command
+### Create a Nagios command
 
 * Command Name: `check_nrpe_rds_device_cals`
 * Command Line: `$USER1$/plugins_app/check_nrpe -H $HOSTADDRESS$ -t 60 -c check_rds_device_cals -a $ARG1$ $ARG2$ $ARG3$ $ARG4$` 
@@ -53,7 +53,7 @@ ARG2 : Critical
 ARG3 : KeyPackType
 ARG4 : ProductVersionID
 ```
-#### Create a Host Service
+### Create a Host Service
 
 * Description: `rds_device_cals`
 * Service Template: `generic-service`
@@ -69,7 +69,7 @@ ARG4 : ProductVersionID
 
 ## Additional information
 
-#### KeyPackType
+### KeyPackType
 
 Select which license packs you want to check
 
@@ -85,7 +85,7 @@ Select which license packs you want to check
 
 More details under: [Microsoft Technet - Win32_TSLicenseKeyPack](https://msdn.microsoft.com/en-us/library/windows/desktop/aa383803%28v=vs.85%29.aspx)
 
-#### ProductVersionID
+### ProductVersionID
 
 Select which product version (Windows Server version) you want to check
 
