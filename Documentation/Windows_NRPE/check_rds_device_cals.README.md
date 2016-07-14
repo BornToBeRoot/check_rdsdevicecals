@@ -1,4 +1,4 @@
-# check_rds_device_cals.ps1
+# check_rds_device_cals (.ps1)
 
 Check your available rds device cals with usage in percent.
 
