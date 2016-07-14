@@ -20,7 +20,7 @@ Could be useful for:
 ## Example (PowerShell)
 
 ```powershell
-.\check_rds_device_cals.ps1 -Warning 25 -Critical 10 -KeyPackTypes 2 -ProductVersionID 2,3
+PS> .\check_rds_device_cals.ps1 -Warning 25 -Critical 10 -KeyPackTypes 2 -ProductVersionID 2,3
 ```
 
 ## Return Values
