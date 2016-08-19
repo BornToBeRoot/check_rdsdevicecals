@@ -75,7 +75,7 @@ Process{
 	try{
 		$TSLicenseKeyPacks = Get-WmiObject -Class Win32_TSLicenseKeyPack -ComputerName $ComputerName -ErrorAction Stop
 	} catch {
-		Write-Host "$($_.Exception.Message)" -NoNewline
+		Write-Host -Message "$($_.Exception.Message)" -NoNewline
 		exit 3
 	}
 
@@ -100,17 +100,17 @@ Process{
     # return critical OR warning OR ok
     if($AvailableLicenses -le $Critical)
     {
-        Write-Host "CRITICAL - $Message"
+        Write-Host -Message "CRITICAL - $Message"
         exit 2
     }
     elseif($AvailableLicenses -le $Warning)
     {
-        Write-Host "WARNING - $Message"        
+        Write-Host -Message "WARNING - $Message"        
         exit 1
     }
     else
     {
-        Write-Host "OK - $Message"
+        Write-Host -Message "OK - $Message"
         exit 0
     }     
 }
