@@ -4,41 +4,13 @@ Some of my nagios plugins (checks) which might be helpful for some of you.
 
 ## Checks
 
-### Windows NRPE
+### Windows NRPE / NSClient++
 
-| Script | Description | Help |
+| Check | Description | Help |
 | :--- | :--- | :---: |
-| [check_rds_device_cals.ps1](Windows_NRPE/check_rds_device_cals.ps1) | Check your available rds device cals with usage in percent | [:book:](Documentation/Windows_NRPE/check_rds_device_cals.README.md) |
+| [check_rds_device_cals.ps1](Windows_NRPE/check_rds_device_cals.ps1) | Check your available terminalserver rds device cals with usage in percent | [:book:](Documentation/Windows_NRPE/check_rds_device_cals.README.md) |
 
-## NRPE Debug mode
+## Help
 
-### Windows
-
-* Stop the NSClient++ service on the Windows server where you want to test the check
-
-For example (PowerShell as admin):
-```powershell
-Get-Service NSCP | Stop-Service
-```
-* Now start the NSClient++ in debug mode with the parameter `test`
-```powershell
-cd "C:\Program Files\NSClient++\"
-nscp.exe test
-```
-* Then connect via SSH to your linux server where nagios is running and execute the following command:
-```
-/usr/lib/nagios/plugins/plugins_app/check_nrpe -H XXX.XXX.XXX.XXX -t 30 -C check_name_XXXX
-```
-* If you are done testing... don't forget to start the NSClient++ service on your Windows server again
-```powershell
-Get-Service NSCP | Start-Service
-```
-
-## Return codes
-
-```
-0 = OK
-1 = Warning
-2 = Critical
-3 = Unknown
-```
+  * [Windows NRPE / NSClient++ debug mode](Documentation/Windows_NRPE_Debug_Mode.README.md)
+  * [Nagios return codes](Documentation/Nagios_Return_Codes.README.md)
