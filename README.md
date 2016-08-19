@@ -12,5 +12,5 @@ Some of my nagios plugins (checks) which might be helpful for some of you.
 
 ## Help
 
-  * [Windows NRPE / NSClient++ debug mode](Documentation/Windows_NRPE_Debug_Mode.README.md)
-  * [Nagios return codes](Documentation/Nagios_Return_Codes.README.md)
+  * [Windows NRPE / NSClient++ debug mode](Documentation/Windows_NRPE_debug_mode.README.md)
+  * [Nagios return codes](Documentation/Nagios_return_codes.README.md)
