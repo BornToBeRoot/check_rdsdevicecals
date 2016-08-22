@@ -73,6 +73,7 @@ Begin{
 Process{
 	# Get all license key packs from WMI
 	try{
+        # If you are using PowerShell 4 or higher, you can use Get-CimInstance instead of Get-WmiObject      
 		$TSLicenseKeyPacks = Get-WmiObject -Class Win32_TSLicenseKeyPack -ComputerName $ComputerName -ErrorAction Stop
 	} catch {
 		Write-Host -Message "$($_.Exception.Message)" -NoNewline
