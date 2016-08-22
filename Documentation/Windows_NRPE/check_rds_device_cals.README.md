@@ -2,7 +2,7 @@
 
 Check your available rds device cals with usage in percent.
 
-* [view script](https://github.com/BornToBeRoot/Nagios_Plugins/blob/master/Windows_NRPE/check_rds_device_cals.ps1)
+* [view script](https://github.com/BornToBeRoot/Nagios_Plugins/blob/master/Scripts/Windows_NRPE/check_rds_device_cals.ps1)
 
 ## Description
 
@@ -67,7 +67,7 @@ ARG4 : ProductVersionID
 ```  
 * Link the hosts you want to check
 
-## Additional information
+## Further information
 
 ### KeyPackType
 
