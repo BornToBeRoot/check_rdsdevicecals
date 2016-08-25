@@ -8,7 +8,7 @@ Some of my nagios plugins (checks) which might be helpful for some of you.
 
 | Check | Description | Help |
 | :--- | :--- | :---: |
-| [check_rds_device_cals.ps1](Scripts/Windows_NRPE/check_rds_device_cals.ps1) | Check your available rds device cals with usage in percent | [:book:](Documentation/Windows_NRPE/check_rds_device_cals.README.md) |
+| [check_rds_device_cals.ps1](Scripts/Windows_NRPE/check_rds_device_cals.ps1) | Check your available rds device cals with usage in percent | [:book:](Documentation/Scripts/Windows_NRPE/check_rds_device_cals.README.md) |
 
 ## Help
 

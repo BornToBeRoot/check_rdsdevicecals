@@ -33,7 +33,7 @@
     .\check_rds_device_cals.ps1 -Warning 20 -Critical 5 -KeyPackTypes 2 -ProductVersionID 2,3
         
     .LINK
-    https://github.com/BornToBeRoot/Nagios_Plugins/blob/master/Documentation/Windows_NRPE/check_rds_device_cals.README.md
+    https://github.com/BornToBeRoot/Nagios_Plugins/blob/master/Documentation/Scripts/Windows_NRPE/check_rds_device_cals.README.md
 #>
 
 [CmdletBinding()]
