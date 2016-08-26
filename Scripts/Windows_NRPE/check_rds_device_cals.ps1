@@ -48,16 +48,28 @@ Param(
 		Position=1,
         Mandatory=$true,
         HelpMessage='Number of free licenses before the status "critical" is returned.')]
+    [ValidateScript({
+        if($_ -ge $Warning)
+        {
+            throw "Critical value cannot be greater or equal than warning value!"
+        }
+        else 
+        {
+            return $true
+        }
+    })]
 	[Int32]$Critical,
 
     [Parameter(
         Position=2,
         HelpMessage="Select your license key pack [KeyPackType --> 0 = unkown, 1 = retail, 2 = volume, 3 = concurrent, 4 = temporary, 5 = open license, 6 = not supported] (More details under: https://msdn.microsoft.com/en-us/library/windows/desktop/aa383803%28v=vs.85%29.aspx)")]
+    [ValidateRange(0,6)]
     [Int32[]]$KeyPackTypes=(0,1,2,3,4,5,6),
 
     [Parameter(
         Position=3,
         HelpMessage="Select your product version [ProductVersionID --> 0 = not supported, 1 = not supported, 2 = 2008, 3 = 2008R2, 4 = 2012] (More details under: https://msdn.microsoft.com/en-us/library/windows/desktop/aa383803%28v=vs.85%29.aspx)")]
+    [ValidateRange(0,4)]
     [Int32[]]$ProductVersionID=(0,1,2,3,4),
 
     [Parameter(
@@ -76,7 +88,7 @@ Process{
         # If you are using PowerShell 4 or higher, you can use Get-CimInstance instead of Get-WmiObject      
 		$TSLicenseKeyPacks = Get-WmiObject -Class Win32_TSLicenseKeyPack -ComputerName $ComputerName -ErrorAction Stop
 	} catch {
-		Write-Host -Message "$($_.Exception.Message)" -NoNewline
+		Write-Host -Object "$($_.Exception.Message)" -NoNewline
 		exit 3
 	}
 
@@ -101,17 +113,17 @@ Process{
     # return critical OR warning OR ok
     if($AvailableLicenses -le $Critical)
     {
-        Write-Host -Message "CRITICAL - $Message"
+        Write-Host -Object "CRITICAL - $Message"
         exit 2
     }
     elseif($AvailableLicenses -le $Warning)
     {
-        Write-Host -Message "WARNING - $Message"        
+        Write-Host -Object "WARNING - $Message"        
         exit 1
     }
     else
     {
-        Write-Host -Message "OK - $Message"
+        Write-Host -Object "OK - $Message"
         exit 0
     }     
 }
