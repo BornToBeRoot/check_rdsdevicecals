@@ -1,4 +1,4 @@
-# check_rdsdevicecals.ps1
+# check_rdsdevicecals
 
 Nagios/Centreon plugin to check your available rds device cals with usage in percent.
 
