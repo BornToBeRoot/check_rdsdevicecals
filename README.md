@@ -93,6 +93,8 @@ Select which product version (Windows Server version) you want to check
 2 - Windows Server 2008
 3 - Windows Server 2008 R2
 4 - Windows Server 2012
+5 - Windows Server 2016
+6 - Windows Server 2019
 ```
 
 More details under: [Microsoft Technet - Win32_TSLicenseKeyPack](https://msdn.microsoft.com/en-us/library/windows/desktop/aa383803%28v=vs.85%29.aspx)

@@ -27,7 +27,9 @@
 	1 - Not supported.
 	2 - Windows Server 2008
 	3 - Windows Server 2008 R2
-	4 - Windows Server 2012
+    4 - Windows Server 2012
+    5 - Windows Server 2016
+    6 - Windows Server 2019
 	   
     .EXAMPLE
     .\check_rds_device_cals.ps1 -Warning 20 -Critical 5 -KeyPackTypes 2 -ProductVersionID 2,3
@@ -68,9 +70,9 @@ Param(
 
     [Parameter(
         Position=3,
-        HelpMessage="Select your product version [ProductVersionID --> 0 = not supported, 1 = not supported, 2 = 2008, 3 = 2008R2, 4 = 2012] (More details under: https://msdn.microsoft.com/en-us/library/windows/desktop/aa383803%28v=vs.85%29.aspx)")]
-    [ValidateRange(0,4)]
-    [Int32[]]$ProductVersionID=(0,1,2,3,4),
+        HelpMessage="Select your product version [ProductVersionID --> 0 = not supported, 1 = not supported, 2 = 2008, 3 = 2008R2, 4 = 2012, 5 = 2016, 6 = 2019] (More details under: https://msdn.microsoft.com/en-us/library/windows/desktop/aa383803%28v=vs.85%29.aspx)")]
+    [ValidateRange(0,6)]
+    [Int32[]]$ProductVersionID=(0,1,2,3,4,5,6),
 
     [Parameter(
         Position=4,
